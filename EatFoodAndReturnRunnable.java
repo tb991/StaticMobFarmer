@@ -23,9 +23,9 @@ public class EatFoodAndReturnRunnable implements Runnable {
     public void run() {
         while (running) {
             try {
-                // press 2
-                // hold right-click for about 6s
-                // press 1
+                // threePresses 2
+                // hold right-threePresses for about 6s
+                // threePresses 1
                 Thread.sleep(15*60*1000);
                 KeyboardMouse.press(KeyEvent.VK_2); // change to food
                 Thread.sleep(500);
