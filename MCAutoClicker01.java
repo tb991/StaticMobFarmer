@@ -5,6 +5,7 @@
  */
 package MCAutoClicker01;
 
+import Frames.StartNCount;
 import Threads.AttackVindisRunnable;
 import Threads.EatFoodAndReturnRunnable;
 import Threads.EscapeAutokickRunnable;
@@ -17,6 +18,8 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 /**
  * system for detecting small graphics expansions, indicating a vehicle moving
@@ -25,20 +28,13 @@ import java.awt.Toolkit;
  * @author tombu
  */
 public class MCAutoClicker01 {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws AWTException, InterruptedException {
-        EscapeAutokickRunnable bossman = new EscapeAutokickRunnable();
-        AttackVindisRunnable bossman2 = new AttackVindisRunnable();
-        EatFoodAndReturnRunnable bossman3 = new EatFoodAndReturnRunnable();
-        Thread king = new Thread(bossman);
-        Thread queen = new Thread(bossman2);
-        Thread prince = new Thread(bossman3);
-        king.start();
-        queen.start();
-        prince.start();
+        StartNCount main = new StartNCount();
+        main.setVisible(true);
+        
     }
 
 }
