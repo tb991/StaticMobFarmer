@@ -17,6 +17,11 @@ import java.util.logging.Logger;
  */
 public class AttackVindisRunnable implements Runnable {
     private volatile boolean running = true;
+    private static int numHits = 0;
+    
+    public int getNumHits(){
+        return this.numHits;
+    }
     
    public void stopRunning(){
         this.running = false;
@@ -24,10 +29,10 @@ public class AttackVindisRunnable implements Runnable {
     @Override
     public void run() {
         
-        while(true){
+        while(running){
             try {
             Robot bob = new Robot();
-            int waitPeriod = 60; //seconds
+            int waitPeriod = 10; //seconds
             int holdTime = 1;
             try {
                 // let Vindicators gather
@@ -36,7 +41,7 @@ public class AttackVindisRunnable implements Runnable {
                 Logger.getLogger(AttackVindisRunnable.class.getName()).log(Level.SEVERE, null, ex);
             }
             // attack them three times
-            if (running){
+            
                 for (int i = 0; i < 3; i++){
                     bob.mousePress(InputEvent.getMaskForButton(1));
                     try {
@@ -51,7 +56,7 @@ public class AttackVindisRunnable implements Runnable {
                         Logger.getLogger(AttackVindisRunnable.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-            }
+                numHits++;
         } catch (AWTException ex) {
             Logger.getLogger(AttackVindisRunnable.class.getName()).log(Level.SEVERE, null, ex);
         }
