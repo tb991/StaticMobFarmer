@@ -32,7 +32,7 @@ public class KeyboardMouse {
         bob.keyRelease(key);
     }
 
-    public static void click(int waitPeriod, int holdTime) throws AWTException, InterruptedException {
+    public static void threePresses(int waitPeriod, int holdTime) throws AWTException, InterruptedException {
         Robot bob = new Robot();
         // let Vindicators gather
         Thread.sleep(1000 * waitPeriod);
