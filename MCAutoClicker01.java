@@ -3,12 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MCAutoClicker01;
-
-import Threads.AttackVindisRunnable;
-import Threads.EatFoodAndReturnRunnable;
-import Threads.EscapeAutokickRunnable;
-import scanner.Screen;
 import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Dimension;

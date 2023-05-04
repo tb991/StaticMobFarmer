@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Threads;
 
 import java.awt.AWTException;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import scanner.KeyboardMouse;
-import scanner.Screen;
+
 
 /**
  *
